@@ -1,6 +1,5 @@
 const themeBtn = document.getElementById("theme-btn");
 
-// Avval tanlangan rejimni eslab qolish
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
 }
