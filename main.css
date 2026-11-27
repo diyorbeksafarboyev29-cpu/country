@@ -25,6 +25,7 @@ button {
   cursor: pointer;
 }
 
+/* ===== Ranglar (Light / Dark) ===== */
 :root {
   --bg: hsl(0, 0%, 98%);
   --element: hsl(0, 0%, 100%);
@@ -46,9 +47,7 @@ body {
   font-size: 14px;
   background-color: var(--bg);
   color: var(--text);
-  transition:
-    background-color 0.3s,
-    color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -57,6 +56,7 @@ body {
   padding: 0 80px;
 }
 
+/* ===== Navbar ===== */
 .bosh {
   background-color: var(--element);
   box-shadow: var(--shadow);
@@ -87,6 +87,7 @@ body.dark .navbar__icon {
   fill: currentColor;
 }
 
+/* ===== Mobil ===== */
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
