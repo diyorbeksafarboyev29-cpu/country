@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* ===== Ranglar (Light / Dark) ===== */
+:root {
+  --bg: hsl(0, 0%, 98%);
+  --element: hsl(0, 0%, 100%);
+  --text: hsl(200, 15%, 8%);
+  --input: hsl(0, 0%, 52%);
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+body.dark {
+  --bg: hsl(207, 26%, 17%);
+  --element: hsl(209, 23%, 22%);
+  --text: hsl(0, 0%, 100%);
+  --input: hsl(0, 0%, 100%);
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+/* ===== Navbar ===== */
+.bosh {
+  background-color: var(--element);
+  box-shadow: var(--shadow);
+  transition: background-color 0.3s;
+}
+
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.navbar__theme {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+body.dark .navbar__icon {
+  fill: currentColor;
+}
+
+/* ===== Mobil ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .navbar {
+    height: 80px;
+  }
+
+  .navbar__logo {
+    font-size: 14px;
+  }
+
+  .navbar__theme {
+    font-size: 12px;
+  }
+
+  .navbar__icon {
+    width: 14px;
+    height: 14px;
+  }
+}
